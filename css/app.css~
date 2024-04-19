@@ -1,0 +1,133 @@
+
+@font-face {
+    font-family: KorinnaBold;
+    src: url(ITC-Korinna-Std-Bold_24698.ttf);
+}
+
+@font-face {
+    font-family: Swiss911;
+    src: url(Swiss911.ttf);
+}
+
+div#content {
+    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+table#jeopardy {
+    background: black;
+    width: 1000px;
+    height: 600px;
+    text-transform: uppercase;
+}
+
+/* The Jeopardy Categories */
+table#jeopardy td, table#jeopardy th {
+    font-family: Swiss911;
+    text-shadow: 4px 4px 2px black;
+    color: #d69f4c;
+    font-size: 64px;
+    text-align: center;
+    vertical-align: center;
+    background: #09137a;
+    width: 207px;
+    height: 117px;
+    border: 2px solid black;
+}
+
+table#jeopardy th {
+    font-family: KorinnaBold;
+    font-size: 24px;
+    color: white;
+    line-height: inherit;
+}
+
+div.clue_answer, div.clue_question {
+    display:none;
+    visibility: hidden;
+    font-family: KorinnaBold;
+    color: white;
+    line-height: normal;
+}
+
+div.clue {
+ -webkit-animation-duration: 200ms;
+          animation-duration: 200ms;
+   -webkit-transition: all ease-in 200ms;
+    -moz-transition: all ease-in 100ms;
+    -ms-transition: all ease-in 100ms;
+    -o-transition: all ease-in 100ms;
+}
+
+
+div.question_state, div.answer_state {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0; 
+    left: 0;
+    z-index:4000;
+    background: #09137a;
+}
+
+
+div.question_state div.clue_answer, div.question_state div.clue_question,
+div.answer_state div.clue_answer, div.answer_state div.clue_question {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    line-height: normal;
+}
+
+
+div.answer_state div.clue_question {
+    display: none;
+    visibility: hidden;
+}
+
+div.answer_state div.clue_answer {
+    display: block;
+    visibility: visible;
+}
+
+div.answer_state div.clue_value {
+    display:none;
+    visibility: hidden;
+}
+
+div.question_state div.clue_answer {
+    display: none;
+    visibility: hidden;
+}
+
+div.question_state div.clue_question {
+    display: block;
+    visibility: visible;
+}
+
+div.question_state div.clue_value {
+    display:none;
+    visibility: hidden;
+}
+
+div.buttons {
+    display: none;
+    visibility: hidden;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    line-height: normal;
+}
+
+div.question_state div.buttons {
+    display: block;
+    visibility: visible;
+}
+
+div.done {
+    display:none;
+    visibility: hidden;
+}
